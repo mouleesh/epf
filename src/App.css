@@ -69,3 +69,16 @@ td, th {
 #wrapper {
   width: 100%;
 }
+
+.masterButton {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 10px;
+  height: 20px;
+}
+
+.masterButton:hover {
+  width: 42px;
+  height: 42px;
+}

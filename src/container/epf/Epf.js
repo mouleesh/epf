@@ -37,6 +37,24 @@ const Epf = () => {
       returnMonth: "APR-2022",
       ecrId: "71216296",
       salaryDisbuDate: "01-APR-2022"
+    },{
+      wageMonth: "APR-2022",
+      uploadedDateTime: "05-MAY-2022 12:14",
+      returnMonth: "MAY-2022",
+      ecrId: "72255249",
+      salaryDisbuDate: "01-MAY-2022"
+    },{
+      wageMonth: "MAY-2022",
+      uploadedDateTime: "03-JUN-2022 15:02",
+      returnMonth: "JUN-2022",
+      ecrId: "73632738",
+      salaryDisbuDate: "01-JUN-2022"
+    },{
+      wageMonth: "JUN-2022",
+      uploadedDateTime: "01-JUL-2022 20:18",
+      returnMonth: "JUL-2022",
+      ecrId: "74876630",
+      salaryDisbuDate: "01-JUL-2022"
     }]
 
     const establishmentId = "TBVLR1805908000";
@@ -45,7 +63,7 @@ const Epf = () => {
     const epfAmount = Math.round(wages * 0.12);
     const eps = Math.round(wages * 0.0833);
     const er = Math.round(wages * 0.0367);
-    const { wageMonth, uploadedDateTime, returnMonth, salaryDisbuDate, ecrId } = monthlyVariables[2]
+    const { wageMonth, uploadedDateTime, returnMonth, salaryDisbuDate, ecrId } = monthlyVariables[5]
 
 
     const totalPages = Math.ceil(members.length/19)
