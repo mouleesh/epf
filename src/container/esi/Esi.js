@@ -1,11 +1,26 @@
 import EsiDetail from "./EsiDetail";
 import EsiSummary from "./EsiSummary";
-import members from "./data/chennai.json";
+import chennaiMembers from "./data/chennai.json";
+import wellingtonMembers from "./data/wellington.json";
 
 const Esi = ({esiDocType}) => {
     let totalMonthlyWages = 0;
     let totalIpContribution = 0;
+    let members = [...chennaiMembers, ...wellingtonMembers];
     
+    members.sort(function(a, b) {
+        const nameA = a.name.toUpperCase(); 
+        const nameB = b.name.toUpperCase(); 
+       if (nameA < nameB) {
+         return -1;
+       }
+       if (nameA > nameB) {
+         return 1;
+       }
+     
+       return 0;
+    });
+
     members.forEach((member) => {
         totalMonthlyWages = parseInt(member.monthlyWages) + totalMonthlyWages
         totalIpContribution = Math.round(member.monthlyWages * 0.0075) + totalIpContribution
@@ -44,7 +59,7 @@ const Esi = ({esiDocType}) => {
         transactionNumber: "CMQESDLEBB6"
     }]
 
-    const { challanPeriod, challanNumber, challanCreateDate, challanSubmittedDate, transactionNumber } = monthlyVariables[3];
+    const { challanPeriod, challanNumber, challanCreateDate, challanSubmittedDate, transactionNumber } = monthlyVariables[2];
 
     return esiDocType === "detail" ? 
         <EsiDetail 

@@ -5,6 +5,9 @@ import LastPage from './LastPage';
 import generalMembers from "./data/members.json";
 import akmMembers from "./data/arakkonam.json";
 import wellingtonMembers from "./data/wellington.json";
+import wellingtonMembersFire from "./data/wellington_fire.json";
+import lakshadweepMembers from "./data/lakshadweep.json";
+import hyderabadMembers from "./data/hyderabad.json";
 import { useState } from 'react';
 
 const Epf = () => {
@@ -12,7 +15,10 @@ const Epf = () => {
     const members = [
       ...generalMembers,
       ...akmMembers,
-      ...wellingtonMembers
+      // ...wellingtonMembers,
+      ...wellingtonMembersFire,
+      ...lakshadweepMembers,
+      ...hyderabadMembers
     ]
 
     // const headerText = "EMPLOYEE'S PROVIDENT FUND";
@@ -55,15 +61,17 @@ const Epf = () => {
       returnMonth: "JUL-2022",
       ecrId: "74876630",
       salaryDisbuDate: "01-JUL-2022"
+    },{
+      wageMonth: "JUL-2022",
+      uploadedDateTime: "08-AUG-2022 16:44",
+      returnMonth: "AUG-2022",
+      ecrId: "76563680",
+      salaryDisbuDate: "01-AUG-2022"
     }]
 
     const establishmentId = "TBVLR1805908000";
-    const wagesPerDay = 433.33
-    const wages = Math.round(wagesPerDay * 30);
-    const epfAmount = Math.round(wages * 0.12);
-    const eps = Math.round(wages * 0.0833);
-    const er = Math.round(wages * 0.0367);
-    const { wageMonth, uploadedDateTime, returnMonth, salaryDisbuDate, ecrId } = monthlyVariables[5]
+    
+    const { wageMonth, uploadedDateTime, returnMonth, salaryDisbuDate, ecrId } = monthlyVariables[6]
 
 
     const totalPages = Math.ceil(members.length/19)
@@ -78,10 +86,7 @@ const Epf = () => {
         start = i * 19;
         stop = (i+1) * 19;
         result.push(<MemberTable 
-          wages={wages} 
-          eps={eps}
-          er={er}
-          epfAmount={epfAmount} 
+          key={i}
           uploadedDateTime={uploadedDateTime} 
           wageMonth={wageMonth} 
           start={start} 
@@ -106,6 +111,18 @@ const Epf = () => {
       return 0;
     });
 
+    let epfAmount = 0;
+    let eps = 0;
+    let er = 0;
+
+    members.forEach(member => {
+      const wagesPerDay = member.wagesPerDay ? member.wagesPerDay : 433.33
+      const wages = Math.round(wagesPerDay * 30);
+      epfAmount = epfAmount + Math.round(wages * 0.12);
+      eps = eps + Math.round(wages * 0.0833);
+      er = er + Math.round(wages * 0.0367);
+    })
+
     return <div id="wrapper">
       <Header headerText={headerText} setHeaderText={setHeaderText}/>
       <MainPage 
@@ -115,10 +132,10 @@ const Epf = () => {
           returnMonth={returnMonth}
           salaryDisbuDate={salaryDisbuDate}
           ecrId={ecrId}
-          totalMembers={members.length}
           epfAmount={epfAmount}
           eps={eps}
           er={er}
+          totalMembers={members.length}
           totalPages={totalPages}
           />
       {getMembersTable()}

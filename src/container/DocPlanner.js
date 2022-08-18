@@ -14,11 +14,11 @@ const DocPlanner = ({setShowDocPlanner, docType, setDocType, esiDocType, setEsiD
         </div>
 
         {docTypeLocal === "esi" ? <div >
-            <input onChange={e => {setEsiDocTypeLocal("detail")}} type="radio" name="esiDocType" value={"detail"} />
-            <label >Detail</label>
-
             <input onChange={e => {setEsiDocTypeLocal("summary")}} type="radio" name="esiDocType" value={"summary"} />
-            <label >Summary</label><br/>
+            <label >Summary</label>
+    
+            <input onChange={e => {setEsiDocTypeLocal("detail")}} type="radio" name="esiDocType" value={"detail"} />
+            <label >Detail</label><br/>
         </div> : null }
         
         <button onClick={() => {

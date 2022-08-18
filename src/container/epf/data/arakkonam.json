@@ -20,6 +20,10 @@
         "uan": "101776884794"
     },
     {
+        "name": "HEMACHANDRAN PICHANDI",
+        "uan": "101776884787"
+    },
+    {
         "name": "R LAKSHMIPATHY",
         "uan": "101776884739"
     },
@@ -37,7 +41,8 @@
     },
     {
         "name": "SANJAY KUMAR K",
-        "uan": "101787021026"
+        "uan": "101787021026",
+        "wagesPerDay": 496.66
     },
     {
         "name": "YESWANTHKUMAR",
@@ -45,7 +50,8 @@
     },
     {
         "name": "DEENA R",
-        "uan": "101679888548"
+        "uan": "101679888548",
+        "wagesPerDay": 496.66
     },
     {
         "name": "MADURAIMUTHU MATHIVANAN",
@@ -57,6 +63,7 @@
     },
     {
         "name": "SHANKAR RAVI",
-        "uan": "101332584322"
+        "uan": "101332584322",
+        "wagesPerDay": 496.66
     }
 ]

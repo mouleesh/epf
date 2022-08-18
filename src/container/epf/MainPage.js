@@ -1,11 +1,6 @@
 import Footer from "./Footer";
 
-const MainPage = ({establishmentId, wageMonth, uploadedDateTime, returnMonth, salaryDisbuDate, ecrId, totalMembers, totalPages, epfAmount, eps, er}) => {
-    const totalEpf = epfAmount * totalMembers;
-    const totalEps = eps * totalMembers;
-    const totalEpfEps = er * totalMembers;
-
-    return <>    
+const MainPage = ({establishmentId, wageMonth, uploadedDateTime, returnMonth, salaryDisbuDate, ecrId, totalMembers, totalPages, epfAmount: totalEpf, eps: totalEps, er: totalEpfEps}) => (<>    
         <div className="main-content">
             <table className="table-1">
                 <tbody>
@@ -45,28 +40,28 @@ const MainPage = ({establishmentId, wageMonth, uploadedDateTime, returnMonth, sa
                     </tr>
                     <tr>
                         <td>Remarks</td>
-                        <td>nil</td>
+                        <td>{"NIL"}</td>
                         <td>ECR Id</td>
                         <td>{ecrId}</td>
                     </tr>
                     <tr>
                         <td>Total Members</td>
                         <td>{totalMembers}</td>
-                        <td>Aadhar Not Seeded Member</td>
-                        <td>0</td>
+                        <td></td>
+                        <td></td>
                     </tr>
                     <tr>
                         <td colSpan="4"><b>Contribution and Remittance Details (In Rupees) :</b></td>
                     </tr>
                     <tr>
                         <td>Total EPF Contibution Remitted</td>
-                        <td>{totalEpf.toLocaleString()}</td>
+                        <td style={{textAlign: "right"}}>{totalEpf.toLocaleString()}</td>
                         <td>Total EPS Contibution Remitted</td>
-                        <td>{totalEps.toLocaleString()}</td>
+                        <td style={{textAlign: "right"}}>{totalEps.toLocaleString()}</td>
                     </tr>
                     <tr>
                         <td>Total EPF-EPS Contibution Remitted</td>
-                        <td>{totalEpfEps.toLocaleString()}</td>
+                        <td style={{textAlign: "right"}}>{totalEpfEps.toLocaleString()}</td>
                         <td>Total Refund Advance</td>
                         <td style={{textAlign: "right"}}>0</td>
                     </tr>
@@ -89,14 +84,14 @@ const MainPage = ({establishmentId, wageMonth, uploadedDateTime, returnMonth, sa
                     </tr>
                     <tr>
                         <td rowSpan="2">Total ABRY Upfront EPF Amount</td>
-                        <td>Employee EPF Share</td>
-                        <td>Employer EPS Share</td>
-                        <td>Employer EPF Share</td>
+                        <td style={{textAlign: "center"}}>Employee EPF Share</td>
+                        <td style={{textAlign: "center"}}>Employer EPS Share</td>
+                        <td style={{textAlign: "center"}}>Employer EPF Share</td>
                     </tr>
                     <tr>
-                        <td>{totalEpf.toLocaleString()}</td>
-                        <td>{totalEps.toLocaleString()}</td>
-                        <td>{totalEpfEps.toLocaleString()}</td>
+                        <td style={{textAlign: "right"}}>{totalEpf.toLocaleString()}</td>
+                        <td style={{textAlign: "right"}}>{totalEps.toLocaleString()}</td>
+                        <td style={{textAlign: "right"}}>{totalEpfEps.toLocaleString()}</td>
                     </tr>
                     <tr>
                         <td>ABRY benefit remarks</td>
@@ -113,7 +108,7 @@ const MainPage = ({establishmentId, wageMonth, uploadedDateTime, returnMonth, sa
             totalPages={totalPages}
             footerTopMargin={"240px"}/>
         </div>
-    </>;
-}
+    </>
+);
 
 export default MainPage;

@@ -1,6 +1,7 @@
 import Footer from "./Footer";
 
-const MemberTable = ({establishmentId, members, pageNo, uploadedDateTime, wageMonth, er, eps, start, epfAmount, wages, totalPages}) => (<div className="members-table-div">
+// const wagesPerDay = 496.66;
+const MemberTable = ({establishmentId, members, pageNo, uploadedDateTime, wageMonth, start, totalPages}) => (<div className="members-table-div">
         {pageNo == 1 ? <p className="ml5">Member Details:- </p> : null}
         {members.length ? <table className="table-1" style={{marginBottom: "50px"}}>
             <thead>
@@ -35,25 +36,33 @@ const MemberTable = ({establishmentId, members, pageNo, uploadedDateTime, wageMo
             </thead>
             <tbody>
                 {
-                    members.map((member, index) => <tr key={`members-table-${index+start}`}>
-                        <td style={{textAlign: "center"}}>{index+1+start}</td>
-                        <td>{member.uan}</td>
-                        <td style={{wordWrap: "break-word"}}>{member.name.toUpperCase()}</td>
-                        <td style={{wordWrap: "break-word"}}>{member.name.toUpperCase()}</td>
-                        <td style={{textAlign: "right"}}>{wages.toLocaleString()}</td>
-                        <td style={{textAlign: "right"}}>{wages.toLocaleString()}</td>
-                        <td style={{textAlign: "right"}}>{wages.toLocaleString()}</td>
-                        <td style={{textAlign: "right"}}>{wages.toLocaleString()}</td>
-                        <td style={{textAlign: "right"}}>{epfAmount.toLocaleString()}</td>
-                        <td style={{textAlign: "right"}}>{eps.toLocaleString()}</td>
-                        <td style={{textAlign: "right"}}>{er.toLocaleString()}</td>
-                        <td style={{textAlign: "right"}}>{0}</td>
-                        <td style={{textAlign: "right"}}>{0}</td>
-                        <td style={{textAlign: "right"}}>{"ABRY"}</td>
-                        <td style={{textAlign: "right"}}>{"ABRY"}</td>
-                        <td style={{textAlign: "right"}}>{"ABRY"}</td>
-                        <td style={{textAlign: "right"}}>{"N.A."}</td>
-                    </tr>)
+                    members.map((member, index) => {
+                        const wagesPerDay = member.wagesPerDay ? member.wagesPerDay : 433.33
+                        const wages = Math.round(wagesPerDay * 30);
+                        const epfAmount = Math.round(wages * 0.12);
+                        const eps = Math.round(wages * 0.0833);
+                        const er = Math.round(wages * 0.0367);
+
+                        return <tr key={`members-table-${index+start}`}>
+                            <td style={{textAlign: "center"}}>{index+1+start}</td>
+                            <td>{member.uan}</td>
+                            <td style={{wordWrap: "break-word"}}>{member.name.toUpperCase()}</td>
+                            <td style={{wordWrap: "break-word"}}>{member.name.toUpperCase()}</td>
+                            <td style={{textAlign: "right"}}>{wages.toLocaleString()}</td>
+                            <td style={{textAlign: "right"}}>{wages.toLocaleString()}</td>
+                            <td style={{textAlign: "right"}}>{wages.toLocaleString()}</td>
+                            <td style={{textAlign: "right"}}>{wages.toLocaleString()}</td>
+                            <td style={{textAlign: "right"}}>{epfAmount.toLocaleString()}</td>
+                            <td style={{textAlign: "right"}}>{eps.toLocaleString()}</td>
+                            <td style={{textAlign: "right"}}>{er.toLocaleString()}</td>
+                            <td style={{textAlign: "right"}}>{0}</td>
+                            <td style={{textAlign: "right"}}>{0}</td>
+                            <td style={{textAlign: "right"}}>{"ABRY"}</td>
+                            <td style={{textAlign: "right"}}>{"ABRY"}</td>
+                            <td style={{textAlign: "right"}}>{"ABRY"}</td>
+                            <td style={{textAlign: "right"}}>{"N.A."}</td>
+                        </tr>
+                    })
                 }
             </tbody>
         </table> : null}
