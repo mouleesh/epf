@@ -4,8 +4,9 @@ import MemberTable from './MemberTable';
 import LastPage from './LastPage';
 import generalMembers from "./data/members.json";
 import akmMembers from "./data/arakkonam.json";
-import wellingtonMembers from "./data/wellington.json";
+import wellingtonMembers from "./data/wellington_backup.json";
 import wellingtonMembersFire from "./data/wellington_fire.json";
+import wellingtonDsscUpkeep from "./data/wellington_dssc_upkeep.json";
 import lakshadweepMembers from "./data/lakshadweep.json";
 import hyderabadMembers from "./data/hyderabad.json";
 import { useState } from 'react';
@@ -18,7 +19,8 @@ const Epf = () => {
       // ...wellingtonMembers,
       ...wellingtonMembersFire,
       ...lakshadweepMembers,
-      ...hyderabadMembers
+      ...hyderabadMembers,
+      ...wellingtonDsscUpkeep
     ]
 
     // const headerText = "EMPLOYEE'S PROVIDENT FUND";
@@ -67,11 +69,44 @@ const Epf = () => {
       returnMonth: "AUG-2022",
       ecrId: "76563680",
       salaryDisbuDate: "01-AUG-2022"
+    },{
+      wageMonth: "AUG-2022",
+      uploadedDateTime: "14-SEP-2022 10:55",
+      returnMonth: "SEP-2022",
+      ecrId: "78366287",
+      salaryDisbuDate: "01-SEP-2022"
+    }, {
+      wageMonth: "SEP-2022",
+      uploadedDateTime: "06-OCT-2022 10:11",
+      returnMonth: "OCT-2022",
+      ecrId: "79051950",
+      salaryDisbuDate: "01-OCT-2022"
+    }, {
+      wageMonth: "OCT-2022",
+      uploadedDateTime: "02-NOV-2022 10:46",
+      returnMonth: "NOV-2022",
+      ecrId: "80220618",
+      salaryDisbuDate: "01-NOV-2022"
+    }, {
+      ref_id: 10,
+      wageMonth: "NOV-2022",
+      uploadedDateTime: "02-DEC-2022 09:42",
+      returnMonth: "DEC-2022",
+      ecrId: "81528614",
+      salaryDisbuDate: "01-DEC-2022"
+    }, {
+      ref_id: 11,
+      wageMonth: "DEC-2022",
+      uploadedDateTime: "02-JAN-2023 13:04",
+      returnMonth: "JAN-2023",
+      ecrId: "82852301",
+      salaryDisbuDate: "01-JAN-2023"
     }]
 
     const establishmentId = "TBVLR1805908000";
-    
-    const { wageMonth, uploadedDateTime, returnMonth, salaryDisbuDate, ecrId } = monthlyVariables[6]
+
+    const refId = 11;
+    const { wageMonth, uploadedDateTime, returnMonth, salaryDisbuDate, ecrId } = monthlyVariables[refId];
 
 
     const totalPages = Math.ceil(members.length/19)
@@ -99,8 +134,8 @@ const Epf = () => {
     }
     
     members.sort(function(a, b) {
-       const nameA = a.name.toUpperCase(); 
-       const nameB = b.name.toUpperCase(); 
+        const nameA = a.name.toUpperCase(); 
+        const nameB = b.name.toUpperCase(); 
       if (nameA < nameB) {
         return -1;
       }

@@ -90,16 +90,28 @@
         "monthlyWages": "22000.00"
     },
     {
-        "ipNumber": "5133059030",
-        "name": "DEEPAK",
+        "ipNumber": "5183710051",
+        "name": "MOHANASUNDARAM",
         "daysWorked": 30,
-        "monthlyWages": "24000.00"
+        "monthlyWages": "23000.00"
+    },
+    {
+        "ipNumber": "5133056429" ,
+        "name": "R DEENA ",
+        "daysWorked": 30,
+        "monthlyWages": "22000.00"
     },
     {
         "ipNumber": "5182431302" ,
         "name": "DODLA MADHU SUDHAN ROA ",
         "daysWorked": 30,
         "monthlyWages": "19000.00"
+    },
+    {
+        "ipNumber": "5133062412" ,
+        "name": "KALAIMANI RAJENDRAN",
+        "daysWorked": 30,
+        "monthlyWages": "22000.00"
     }
 ]
 

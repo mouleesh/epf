@@ -57,9 +57,9 @@ const MemberTable = ({establishmentId, members, pageNo, uploadedDateTime, wageMo
                             <td style={{textAlign: "right"}}>{er.toLocaleString()}</td>
                             <td style={{textAlign: "right"}}>{0}</td>
                             <td style={{textAlign: "right"}}>{0}</td>
-                            <td style={{textAlign: "right"}}>{"ABRY"}</td>
-                            <td style={{textAlign: "right"}}>{"ABRY"}</td>
-                            <td style={{textAlign: "right"}}>{"ABRY"}</td>
+                            <td style={{textAlign: "right"}}>{!member.isNotABRY ? "ABRY" : "-"}</td>
+                            <td style={{textAlign: "right"}}>{!member.isNotABRY ? "ABRY" : "-"}</td>
+                            <td style={{textAlign: "right"}}>{!member.isNotABRY ? "ABRY" : "-"}</td>
                             <td style={{textAlign: "right"}}>{"N.A."}</td>
                         </tr>
                     })

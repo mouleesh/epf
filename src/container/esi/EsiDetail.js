@@ -50,7 +50,7 @@ const EsiDetail = ({challanPeriod, members, totalMonthlyWages, totalIpContributi
                     </td>
                     <td style={{borderTop: "2px solid black", borderRightColor: "white", textAlign: "right"}}>
                         <b>
-                            {`${totalMonthlyWages}.00`}
+                            {`${totalMonthlyWages.toFixed(2)}`}
                         </b>
                     </td>
                     <td style={{borderTop: "2px solid black", borderRightColor: "white", textAlign: "right"}}>
@@ -60,7 +60,7 @@ const EsiDetail = ({challanPeriod, members, totalMonthlyWages, totalIpContributi
                     </td>
                     <td style={{borderTop: "2px solid black", textAlign: "right"}}>
                         <b>
-                            {`${totalIpContribution}.00`}
+                            {`${totalIpContribution.toFixed(2)}`}
                         </b>
                     </td>
                 </tr>
@@ -78,11 +78,11 @@ const EsiDetail = ({challanPeriod, members, totalMonthlyWages, totalIpContributi
             </thead>
             <tbody>
                 <tr>
-                    <td style={{borderRightColor: "white"}}>{`${totalIpContribution}.00`}</td>
-                    <td style={{borderRightColor: "white"}}>{`${totalMonthlyWages*0.0325}.00`}</td>
-                    <td style={{borderRightColor: "white"}}>{`${totalIpContribution + (totalMonthlyWages*0.0325)}.00`}</td>
+                    <td style={{borderRightColor: "white"}}>{`${totalIpContribution.toFixed(2)}`}</td>
+                    <td style={{borderRightColor: "white"}}>{`${(totalMonthlyWages*0.0325).toFixed(2)}`}</td>
+                    <td style={{borderRightColor: "white"}}>{`${(totalIpContribution + (totalMonthlyWages*0.0325)).toFixed(2)}`}</td>
                     <td style={{borderRightColor: "white"}}>{"0.00"}</td>
-                    <td>{`${totalMonthlyWages}.00`}</td>
+                    <td>{`${totalMonthlyWages.toFixed(2)}`}</td>
                 </tr>
             </tbody>
         </table>
