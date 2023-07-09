@@ -3,24 +3,29 @@ import MainPage from './MainPage';
 import MemberTable from './MemberTable';
 import LastPage from './LastPage';
 import generalMembers from "./data/members.json";
-import akmMembers from "./data/arakkonam.json";
-import wellingtonMembers from "./data/wellington_backup.json";
+// import akmMembers from "./data/arakkonam.json";
+import akm2023Members from "./data/arakkonam2023.json";
+// import wellingtonMembers from "./data/wellington_backup.json";
 import wellingtonMembersFire from "./data/wellington_fire.json";
 import wellingtonDsscUpkeep from "./data/wellington_dssc_upkeep.json";
-import lakshadweepMembers from "./data/lakshadweep.json";
-import hyderabadMembers from "./data/hyderabad.json";
+// import lakshadweepMembers from "./data/lakshadweep.json";
+// import hyderabadMembers from "./data/hyderabad.json";
+import tirunelveliMembers from "./data/tirunelveli.json";
 import { useState } from 'react';
+
 
 const Epf = () => {
 
     const members = [
       ...generalMembers,
-      ...akmMembers,
+      // ...akmMembers,
       // ...wellingtonMembers,
       ...wellingtonMembersFire,
-      ...lakshadweepMembers,
-      ...hyderabadMembers,
-      ...wellingtonDsscUpkeep
+      // ...lakshadweepMembers,
+      // ...hyderabadMembers,
+      ...wellingtonDsscUpkeep,
+      ...tirunelveliMembers,
+      ...akm2023Members
     ]
 
     // const headerText = "EMPLOYEE'S PROVIDENT FUND";
@@ -101,13 +106,47 @@ const Epf = () => {
       returnMonth: "JAN-2023",
       ecrId: "82852301",
       salaryDisbuDate: "01-JAN-2023"
+    }, {
+      ref_id: 12,
+      wageMonth: "JAN-2023",
+      uploadedDateTime: "13-FEB-2023 11:52",
+      returnMonth: "FEB-2023",
+      ecrId: "84865630",
+      salaryDisbuDate: "01-FEB-2023"
+    }, {
+      ref_id: 13,
+      wageMonth: "FEB-2023",
+      uploadedDateTime: "15-MAR-2023 13:16",
+      returnMonth: "MAR-2023",
+      ecrId: "86462539",
+      salaryDisbuDate: "01-MAR-2023"
+    }, {
+      ref_id: 14,
+      wageMonth: "MAR-2023",
+      uploadedDateTime: "11-APR-2023 16:20",
+      returnMonth: "APR-2023",
+      ecrId: "87458883",
+      salaryDisbuDate: "01-APR-2023"
+    }, {
+      ref_id: 15,
+      wageMonth: "APR-2023",
+      uploadedDateTime: "15-MAY-2023 15:40",
+      returnMonth: "MAY-2023",
+      ecrId: "89148198",
+      salaryDisbuDate: "01-MAY-2023"
+    }, {
+      ref_id: 16,
+      wageMonth: "MAY-2023",
+      uploadedDateTime: "12-JUN-2023 14:45",
+      returnMonth: "JUN-2023",
+      ecrId: "90142105",
+      salaryDisbuDate: "01-JUN-2023"
     }]
 
     const establishmentId = "TBVLR1805908000";
 
-    const refId = 11;
+    const refId = 14;
     const { wageMonth, uploadedDateTime, returnMonth, salaryDisbuDate, ecrId } = monthlyVariables[refId];
-
 
     const totalPages = Math.ceil(members.length/19)
 
@@ -152,7 +191,8 @@ const Epf = () => {
 
     members.forEach(member => {
       const wagesPerDay = member.wagesPerDay ? member.wagesPerDay : 433.33
-      const wages = Math.round(wagesPerDay * 30);
+      const nonNCPDays = 30
+      const wages = Math.round(wagesPerDay * nonNCPDays);
       epfAmount = epfAmount + Math.round(wages * 0.12);
       eps = eps + Math.round(wages * 0.0833);
       er = er + Math.round(wages * 0.0367);

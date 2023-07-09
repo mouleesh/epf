@@ -55,7 +55,7 @@ const MemberTable = ({establishmentId, members, pageNo, uploadedDateTime, wageMo
                             <td style={{textAlign: "right"}}>{epfAmount.toLocaleString()}</td>
                             <td style={{textAlign: "right"}}>{eps.toLocaleString()}</td>
                             <td style={{textAlign: "right"}}>{er.toLocaleString()}</td>
-                            <td style={{textAlign: "right"}}>{0}</td>
+                            <td style={{textAlign: "right"}}>{member.nonNCPDays ? member.nonNCPDays : 0}</td>
                             <td style={{textAlign: "right"}}>{0}</td>
                             <td style={{textAlign: "right"}}>{!member.isNotABRY ? "ABRY" : "-"}</td>
                             <td style={{textAlign: "right"}}>{!member.isNotABRY ? "ABRY" : "-"}</td>
@@ -72,7 +72,7 @@ const MemberTable = ({establishmentId, members, pageNo, uploadedDateTime, wageMo
             uploadedDateTime={uploadedDateTime}
             page={pageNo} 
             totalPages={totalPages}
-            footerTopMargin={pageNo !== totalPages+1 ? "10px" : "550px"}/>
+            footerTopMargin={pageNo !== totalPages+1 ? "10px" : "650px"}/>
     </div>
 );
 

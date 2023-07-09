@@ -1,70 +1,5 @@
 [
     {
-      "name": "A B SARAVANAN",
-      "uan": "101644216536"
-    },
-    {
-      "name": "A BALAMURUGAN",
-      "uan": "101679888569"
-    },
-    {
-      "name": "ANJINEYULU",
-      "uan": "101261166438"
-    },
-    {
-      "name": "KAPILDEV M S",
-      "uan": "101787019802"
-    },
-    {
-      "name": "N RAJESH",
-      "uan": "101787021035",
-      "wagesPerDay": 496.66
-    },
-    {
-      "name": "RUTHRAPATHY RAMASAMY",
-      "uan": "101787021057",
-      "wagesPerDay": 496.66
-    },
-    {
-      "name": "VARUNKUMAR",
-      "uan": "101787021061"
-    },
-    {
-      "name": "VASANTH KUMAR S",
-      "uan": "101787021019"
-    },
-    {
-      "name": "VELU",
-      "uan": "101787021042",
-      "wagesPerDay": 496.66
-    },
-    {
-      "name": "VETRISELVAN S",
-      "uan": "101499301972",
-      "wagesPerDay": 496.66
-    },
-    {
-      "name": "VIJAYAKUMAR SELVARAJ",
-      "uan": "101776884756"
-    },
-    {
-      "name": "BANDU VITTHAL DARSHANWAR",
-      "uan": "101356813401"
-    },
-    { 
-      "name": "BEEFATHUMMA ULLIKKANAPURA",
-      "uan": "101699525177"
-    },
-    {
-      "name": "CHANDRAMA VISHVKARMA",
-      "uan": "101679889403",
-      "wagesPerDay": 496.66
-    },
-    {
-      "name": "CHERLA RENUKA",
-      "uan": "101679889426"
-    },
-    {
       "name": "DILLIPRABHU MOHAN",
       "uan": "101679889380",
       "wagesPerDay": 496.66
@@ -85,7 +20,6 @@
       "uan": "101679888553"
     },
     {
-      
       "name": "GANESAN MUNUSWAMY",
       "uan": "101679888498",
       "wagesPerDay": 496.66
@@ -97,72 +31,11 @@
       "wagesPerDay": 496.66
     },
     {
-     
       "name": "HEMAVATHY GURUNATHAN",
       "uan": "101383921080"
     },
-      {
-        
-        "name": "MADAN KUMAR SINGH",
-        "uan": "101679889398",
-        "wagesPerDay": 496.66
-      },
-      {
-        
-        "name": "MALATHI C",
-        "uan": "101383921098"
-      },
-      {
-        
-        "name": "S SUGUMAR",
-        "uan": "101203949092",
-        "wagesPerDay": 496.66
-      },
-      {
-        "name": "SARAVANAN K",
-        "uan": "101679888480",
-        "wagesPerDay": 496.66
-      },
-      {
-        
-        "name": "STIFAN",
-        "uan": "101679888530"
-      },
-      {
-        "name": "SYED MUSTAFA",
-        "uan": "101679888511"
-      },
-      {
-        "name": "DEEPAK",
-        "uan": "101413173796",
-        "wagesPerDay": 496.66
-      },
-      {
-        "name": "KALAIMANI RAJENDRAN",
-        "uan": "101314792192",
-        "wagesPerDay": 496.66
-      },
-      {
-        "name": "KAVIRAJ MOHAN",
-        "uan": "101379733579",
-        "wagesPerDay": 496.66
-      },
-      {
-        "name": "M NANDAGOPAL",
-        "uan": "101167222186"
-      },
-      {
-        "name": "MESHAK ABHRAGAM",
-        "uan": "101274103053",
-        "wagesPerDay": 496.66
-      },
-      {
-        "name": "SRINIVASAN K",
-        "uan": "101312534671"
-      },
-      {
-        "name": "SUBASH",
-        "uan": "101167529316",
-        "wagesPerDay": 496.66
-      }
-  ]
+    {
+      "name": "MALATHI C",
+      "uan": "101383921098"
+    }
+]

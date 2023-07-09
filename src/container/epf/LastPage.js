@@ -95,7 +95,7 @@ const LastPage = ({establishmentId, page, uploadedDateTime, wageMonth, totalPage
         uploadedDateTime={uploadedDateTime}
         page={page} 
         totalPages={totalPages}
-        footerTopMargin={"550px"}/>
+        footerTopMargin={"700px"}/>
 </div>
 );
 
