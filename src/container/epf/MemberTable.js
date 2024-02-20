@@ -38,7 +38,8 @@ const MemberTable = ({establishmentId, members, pageNo, uploadedDateTime, wageMo
                 {
                     members.map((member, index) => {
                         const wagesPerDay = member.wagesPerDay ? member.wagesPerDay : 433.33
-                        const wages = Math.round(wagesPerDay * 30);
+                        const nonNCPDays = member.nonNCPDays ? member.nonNCPDays : 30
+                        const wages = Math.round(wagesPerDay * nonNCPDays);
                         const epfAmount = Math.round(wages * 0.12);
                         const eps = Math.round(wages * 0.0833);
                         const er = Math.round(wages * 0.0367);

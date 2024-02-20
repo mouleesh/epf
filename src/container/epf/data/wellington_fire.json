@@ -1,14 +1,17 @@
 [
     {
         "name": "MOHANASUNDARAM",
-        "uan": "101792971131"
+        "uan": "101792971131",
+        "isNotABRY": true
     },
     {
         "name": "R YUVARAJ",
-        "uan": "101716383001"
+        "uan": "101716383001",
+        "isNotABRY": true
     },
     {
         "name": "GURUBASAVAKUMAR GURULINGU",
-        "uan": "101793931263"
+        "uan": "101793931263",
+        "isNotABRY": true
     }
 ]

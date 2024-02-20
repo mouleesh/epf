@@ -2,40 +2,48 @@
     {
       "name": "DILLIPRABHU MOHAN",
       "uan": "101679889380",
-      "wagesPerDay": 496.66
+      "wagesPerDay": 496.66,
+      "isNotABRY": true
     },
     {
       
       "name": "DODLA JETHANDRA",
       "uan": "101679888524",
-      "wagesPerDay": 496.66
+      "wagesPerDay": 496.66,
+      "isNotABRY": true
     },
     {
       
       "name": "DODLA MADHU SUDHAN RAO",
-      "uan": "101684745365"
+      "uan": "101684745365",
+      "isNotABRY": true
     },
     {
       "name": "G SUSHMA SREE",
-      "uan": "101679888553"
+      "uan": "101679888553",
+      "isNotABRY": true
     },
     {
       "name": "GANESAN MUNUSWAMY",
       "uan": "101679888498",
-      "wagesPerDay": 496.66
+      "wagesPerDay": 496.66,
+      "isNotABRY": true
     },
     {
       
       "name": "GOPI M",
       "uan": "100155219146",
-      "wagesPerDay": 496.66
+      "wagesPerDay": 496.66,
+      "isNotABRY": true
     },
     {
       "name": "HEMAVATHY GURUNATHAN",
-      "uan": "101383921080"
+      "uan": "101383921080",
+      "isNotABRY": true
     },
     {
       "name": "MALATHI C",
-      "uan": "101383921098"
+      "uan": "101383921098",
+      "isNotABRY": true
     }
 ]

@@ -141,11 +141,53 @@ const Epf = () => {
       returnMonth: "JUN-2023",
       ecrId: "90142105",
       salaryDisbuDate: "01-JUN-2023"
+    }, {
+      ref_id: 17,
+      wageMonth: "JUN-2023",
+      uploadedDateTime: "06-JUL-2023 17:11",
+      returnMonth: "JUL-2023",
+      ecrId: "91072151",
+      salaryDisbuDate: "01-JUL-2023"
+    }, {
+      ref_id: 18,
+      wageMonth: "JUL-2023",
+      uploadedDateTime: "14-AUG-2023 12:35",
+      returnMonth: "AUG-2023",
+      ecrId: "93297995",
+      salaryDisbuDate: "01-AUG-2023"
+    }, {
+      ref_id: 19,
+      wageMonth: "AUG-2023",
+      uploadedDateTime: "14-SEP-2023 19:34",
+      returnMonth: "SEP-2023",
+      ecrId: "",
+      salaryDisbuDate: "01-SEP-2023"
+    }, {
+      ref_id: 20,
+      wageMonth: "SEP-2023",
+      uploadedDateTime: "14-OCT-2023 15:25",
+      returnMonth: "OCT-2023",
+      ecrId: "96128238",
+      salaryDisbuDate: "01-OCT-2023"
+    }, {
+      ref_id: 21,
+      wageMonth: "OCT-2023",
+      uploadedDateTime: "10-NOV-2023 11:47",
+      returnMonth: "NOV-2023",
+      ecrId: "97241322",
+      salaryDisbuDate: "01-NOV-2023"
+    }, {
+      ref_id: 22,
+      wageMonth: "NOV-2023",
+      uploadedDateTime: "07-DEC-2023 11:15",
+      returnMonth: "DEC-2023",
+      ecrId: "98170898",
+      salaryDisbuDate: "01-DEC-2023"
     }]
 
     const establishmentId = "TBVLR1805908000";
 
-    const refId = 14;
+    const refId = 22;
     const { wageMonth, uploadedDateTime, returnMonth, salaryDisbuDate, ecrId } = monthlyVariables[refId];
 
     const totalPages = Math.ceil(members.length/19)
@@ -191,7 +233,7 @@ const Epf = () => {
 
     members.forEach(member => {
       const wagesPerDay = member.wagesPerDay ? member.wagesPerDay : 433.33
-      const nonNCPDays = 30
+      const nonNCPDays = member.nonNCPDays ? member.nonNCPDays : 30
       const wages = Math.round(wagesPerDay * nonNCPDays);
       epfAmount = epfAmount + Math.round(wages * 0.12);
       eps = eps + Math.round(wages * 0.0833);

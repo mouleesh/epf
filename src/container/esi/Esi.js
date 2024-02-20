@@ -1,16 +1,20 @@
 import EsiDetail from "./EsiDetail";
 import EsiSummary from "./EsiSummary";
 import chennaiMembers from "./data/chennai.json";
-import wellingtonFire from "./data/wellington_fire.json";
+// import wellingtonFire from "./data/wellington_fire.json";
 import arakkonam2023 from "./data/arakkonam2023.json";
+import tirunelveli from "./data/Tirunelveli.json";
+import membersJson from "./data/members.json";
 
 const Esi = ({esiDocType}) => {
     let totalMonthlyWages = 0;
     let totalIpContribution = 0;
     let members = [
-        // ...chennaiMembers, 
-        ...wellingtonFire,
-        ...arakkonam2023
+        ...chennaiMembers, 
+        // ...wellingtonFire,
+        ...arakkonam2023,
+        ...tirunelveli,
+        // ...membersJson
     ];
     
     members.sort(function(a, b) {
@@ -138,13 +142,55 @@ const Esi = ({esiDocType}) => {
     }, {
         ref_id: 14,
         challanPeriod: "May-2023",
-        challanNumber: "09272456321525",
+        challanNumber: "05123121398111",
         challanCreateDate: "12-06-2023 16:32:31",
         challanSubmittedDate: "13-06-2023 12:04:48",
         transactionNumber: "CPACVEOUT8"
+    }, {
+        ref_id: 15,
+        challanPeriod: "Jun-2023",
+        challanNumber: "05123124109923",
+        challanCreateDate: "07-07-2023 17:16:35",
+        challanSubmittedDate: "08-07-2023 14:21:56",
+        transactionNumber: "CPACWWCRN7"
+    }, {
+        ref_id: 16,
+        challanPeriod: "Jul-2023",
+        challanNumber: "05123129860506",
+        challanCreateDate: "14-08-2023 17:46:42",
+        challanSubmittedDate: "14-08-2023 20:30:58",
+        transactionNumber: "CPACZQBME4"
+    }, {
+        ref_id: 17,
+        challanPeriod: "Aug-2023",
+        challanNumber: "05123133936673",
+        challanCreateDate: "14-09-2023 19:45:18",
+        challanSubmittedDate: "15-09-2023 21:54:02",
+        transactionNumber: "CPADCBAJS4"
+    }, {
+        ref_id: 18,
+        challanPeriod: "Sep-2023",
+        challanNumber: "05123138232813",
+        challanCreateDate: "14-10-2023 22:24:00",
+        challanSubmittedDate: "15-10-2023 12:58:56",
+        transactionNumber: "CPADEFFXK9"
+    }, {
+        ref_id: 19,
+        challanPeriod: "Oct-2023",
+        challanNumber: "05123142258670",
+        challanCreateDate: "14-11-2023 16:04:51",
+        challanSubmittedDate: "14-11-2023 16:06:06",
+        transactionNumber: "CPADGHXBZ9"
+    }, {
+        ref_id: 20,
+        challanPeriod: "Nov-2023",
+        challanNumber: "05123146418683",
+        challanCreateDate: "15-12-2023 15:24:59",
+        challanSubmittedDate: "15-12-2023 15:25:22",
+        transactionNumber: "CPADITKRG2"
     }]
 
-    const refId = 12;
+    const refId = 20;
     const { challanPeriod, challanNumber, challanCreateDate, challanSubmittedDate, transactionNumber } = monthlyVariables[refId];
 
     return esiDocType === "detail" ? 
